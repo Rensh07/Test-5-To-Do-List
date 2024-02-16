@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>Test-5 ToDo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Todo List</h1>
+        <div class="alert-message"></div>
+        <div class="input-section">
+          <input type="text" placeholder="Add a title . . ." class="i-title" />
+          <input type="date" class="i-date" />
+          <input type="time" class="i-time" />
+          <input type="text" placeholder="Add Description" class="i-desc" />
+          <button class="btn btn-1 add-task-button">+</button>
+        </div>
+      </header>
+
+      <table class="table">
+        <thead class="t-head">
+          <tr>
+            <th class="th-1">Task</th>
+            <th>Due Date</th>
+            <th>Time</th>
+            <th class="th-1">Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="todos-list-body">
+          <!-- <tr class="todo-item">
+            <td class="td">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              quaerat amet consequuntur! Ullam ratione est quaerat, officia
+              suscipit nulla velit, itaque cum asperiores tenetur a, accusamus
+              placeat sunt quisquam debitis?
+            </td>
+            <td>2024-02-13</td>
+            <td class="time">10:00</td>
+            <td class="td">Description</td>
+            <td class="pendding">Pendding</td>
+            <td class="btn-3">
+              <button class="delete">
+                <i class="fa-solid fa-pencil"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="delete">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
