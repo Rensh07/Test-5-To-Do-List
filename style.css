@@ -141,7 +141,14 @@ body {
 }
 
 .td {
-  width: 20vw;
+  overflow-x: scroll;
+  width: 40rem;
+  text-align: left;
+}
+
+.td::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .btn-3 {
@@ -168,4 +175,11 @@ body {
 }
 
 .e-input {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  color: #000;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  background-color: #fff;
 }

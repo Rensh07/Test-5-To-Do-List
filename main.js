@@ -3,22 +3,29 @@ const addButton = document.querySelector('.add-task-button');
 const todosListBody = document.querySelector('.todos-list-body');
 const deleteEl = document.querySelector('.delete');
 const editButton = document.querySelector('.edit');
-const completeBtn = document.querySelector('.complete');
+const completeBtn = document.querySelectorAll('.complete');
 
 addButton.onclick = function () {
-  if (textInputField.value.length == 0) {
-    alert('Kindly Enter ALL Details!!!!');
+  var titleValue = document.querySelector('.input-section .i-title').value;
+  var dateValue = document.querySelector('.input-section .i-date').value;
+  var timeValue = document.querySelector('.input-section .i-time').value;
+  var descValue = document.querySelector('.input-section .i-desc').value;
+
+  if (
+    titleValue.length === 0 ||
+    dateValue.length === 0 ||
+    timeValue.length === 0 ||
+    descValue.length === 0
+  ) {
+    alert('Please fill out all fields!');
+    return;
   } else {
     todosListBody.innerHTML += `
     <tr class="todo-item">
-      <td class="td">${
-        document.querySelector('.input-section .i-title').value
-      }</td>
-      <td>${document.querySelector('.input-section .i-date').value}</td>
-      <td>${document.querySelector('.input-section .i-time').value}</td>
-      <td class="td">${
-        document.querySelector('.input-section .i-desc').value
-      }</td>
+      <td class="td">${titleValue}</td>
+      <td>${dateValue}</td>
+      <td>${timeValue}</td>
+      <td class="td">${descValue}</td>
       <td class="pending">Pending</td>
       <td class=btn-3>
         <button class="edit" onclick="editRow(this)">
@@ -36,9 +43,10 @@ addButton.onclick = function () {
   }
 };
 
-//status complete
-function complete(btn) {
-  document.querySelector('.pending').textContent = 'complete';
+//Status change row
+function complete(btn1) {
+  var row = btn1.parentNode.parentNode;
+  row.querySelector('.pending').textContent = 'Complete';
 }
 
 //delete row
@@ -88,13 +96,14 @@ function saveRow(button) {
   cells[3].innerText = desc;
 
   cells[5].innerHTML = `
-  <button class="edit" onclick="editRow(this)">
-    <i class="fa-solid fa-pencil"></i>
-  </button>
-  <button class="complete">
-    <i class="fa-solid fa-check"></i>
-  </button>
-  <button class="delete" onclick="deleteRow(this)">
-    <i class="far fa-trash-alt"></i>
-  </button>`;
+    <button class="edit" onclick="editRow(this)">
+      <i class="fa-solid fa-pencil"></i>
+    </button>
+    <button class="complete" onclick="complete(this)">
+      <i class="fa-solid fa-check"></i>
+    </button>
+    <button class="delete" onclick="deleteRow(this)">
+      <i class="far fa-trash-alt"></i>
+    </button>
+  `;
 }
