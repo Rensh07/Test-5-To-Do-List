@@ -140,9 +140,17 @@ body {
   border-bottom: 1px solid #fff;
 }
 
+.todo-item td:nth-child(5) {
+  width: max-content;
+}
+
+.todo-item td:nth-child(2) {
+  width: 12rem;
+}
+
 .td {
   overflow-x: scroll;
-  width: 40rem;
+  width: 30rem;
   text-align: left;
 }
 
@@ -175,7 +183,7 @@ body {
 }
 
 .e-input {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1.5rem;
   color: #000;
   border: none;
