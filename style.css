@@ -112,9 +112,29 @@ body {
   font-weight: 400;
 }
 
-.th-1 {
-  width: 20vw;
+th {
   text-align: left;
+}
+
+.th-1 {
+  width: 20%;
+  text-align: left;
+}
+
+.t-head th:nth-child(2) {
+  width: 8%;
+}
+
+.t-head th:nth-child(3) {
+  width: 5%;
+}
+
+.t-head th:nth-child(5) {
+  width: 6.5%;
+}
+
+.t-head th:nth-child(6) {
+  width: 8%;
 }
 
 .todos-list-body {
@@ -140,17 +160,9 @@ body {
   border-bottom: 1px solid #fff;
 }
 
-.todo-item td:nth-child(5) {
-  width: max-content;
-}
-
-.todo-item td:nth-child(2) {
-  width: 12rem;
-}
-
 .td {
   overflow-x: scroll;
-  width: 30rem;
+  width: 20%;
   text-align: left;
 }
 
@@ -159,12 +171,28 @@ body {
   height: 0;
 }
 
+.todo-item td:nth-child(2) {
+  width: 8%;
+}
+
+.todo-item td:nth-child(3) {
+  width: 5%;
+}
+
+.todo-item td:nth-child(5) {
+  width: 6.5%;
+}
+
+.todo-item td:nth-child(6) {
+  width: 8%;
+}
+
 .btn-3 {
   display: flex;
   width: min-content;
   flex-direction: row;
   justify-content: space-between;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .delete,

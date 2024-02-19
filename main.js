@@ -1,9 +1,6 @@
 const textInputField = document.querySelector('.input-section input');
 const addButton = document.querySelector('.add-task-button');
 const todosListBody = document.querySelector('.todos-list-body');
-const deleteEl = document.querySelector('.delete');
-const editButton = document.querySelector('.edit');
-const completeBtn = document.querySelectorAll('.complete');
 
 addButton.onclick = function () {
   var titleValue = document.querySelector('.input-section .i-title').value;
@@ -40,6 +37,11 @@ addButton.onclick = function () {
       </td>
     </tr>
     `;
+
+    document.querySelector('.input-section .i-title').value = '';
+    document.querySelector('.input-section .i-date').value = '';
+    document.querySelector('.input-section .i-time').value = '';
+    document.querySelector('.input-section .i-desc').value = '';
   }
 };
 
@@ -47,6 +49,13 @@ addButton.onclick = function () {
 function complete(btn1) {
   var row = btn1.parentNode.parentNode;
   row.querySelector('.pending').textContent = 'Complete';
+
+  var editButton = row.querySelector('.edit');
+  var deleteButton = row.querySelector('.delete');
+  var completeButton = row.querySelector('.complete');
+  editButton.disabled = true;
+  deleteButton.disabled = true;
+  completeButton.disabled = true;
 }
 
 //delete row
